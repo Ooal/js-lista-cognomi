@@ -10,11 +10,11 @@ while (nuovoNome == "") {
 nomi.push(nuovoNome);
 
 
-while (j != nomi.length) {
+while (j < nomi.length ) {
 
   for (var i = 0; i < nomi.length - 1 ; i++) {
     var scambio = nomi[i].localeCompare(nomi[i+1]);
-    
+
     if (scambio != -1) {
       var primoScambio1 = nomi[i];
       var primoScambio2 = nomi[i+1];
