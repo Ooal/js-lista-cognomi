@@ -2,20 +2,19 @@
 
 var nomi = ["Giovanni","Maurizio", "Chiara", "Giulia", "Giulio"];
 var nuovoNome="";
+var j=0;
 
 while (nuovoNome == "") {
   var nuovoNome = prompt("Inserisci un nome");
 }
 nomi.push(nuovoNome);
-console.log(nomi);
-console.log(nomi.length);
-var j=0;
+
+
 while (j != nomi.length) {
+
   for (var i = 0; i < nomi.length - 1 ; i++) {
     var scambio = nomi[i].localeCompare(nomi[i+1]);
-    console.log(nomi[i]);
-    console.log(nomi[i+1]);
-    console.log(scambio);
+    
     if (scambio != -1) {
       var primoScambio1 = nomi[i];
       var primoScambio2 = nomi[i+1];
@@ -26,9 +25,9 @@ while (j != nomi.length) {
       nomi[i] = primoScambio1
       nomi[i+1] = secondoScambio1
     }
+
   }
+
   j++;
 }
-
-
 console.log(nomi);
